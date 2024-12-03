@@ -36,7 +36,7 @@ class Director(Officer):
     def calculate_bonus(self):
         return super().calculate_bonus() + (self.project * 50)
 
-
+#Пример
 officer = Officer(160, 20, 0.1)
 senior_officer = SeniorOfficer(180, 25, 0.15, 5)
 director = Director(200, 30, 0.2, 10)

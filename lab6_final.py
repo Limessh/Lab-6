@@ -8,7 +8,7 @@ class Officer:
         return self.hours_work * self.rate * self.bonus
 
     def salary_to_hours_ratios(self):
-        return self.total_salary() / self.hours_work if self.hours_work != 0 else 0
+        return self.total_salary() / self.hours_work 
 
     def total_salary(self):
         return (self.hours_work * self.rate) + self.calculate_bonus()

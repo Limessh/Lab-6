@@ -25,7 +25,7 @@ class SeniorOfficer(Officer):
         self.project = project
 
     def calculate_bonus(self):
-        return super().calculate_bonus() + (self.project * 100)
+        return super().calculate_bonus() + (self.project * 50)
 
 
 class Director(Officer):
@@ -34,7 +34,7 @@ class Director(Officer):
         self.project = project
 
     def calculate_bonus(self):
-        return super().calculate_bonus() + (self.project * 50)
+        return super().calculate_bonus() + (self.project * 100)
 
 #Пример
 officer = Officer(160, 20, 0.1)
@@ -44,6 +44,10 @@ director = Director(200, 30, 0.2, 10)
 print(f"Зарплата сотрудника: {officer.total_salary()}")
 print(f"Зарплата старшего сотрудника: {senior_officer.total_salary()}")
 print(f"Зарплата директора: {director.total_salary()}")
+
+print(f"Премия сотрудника: {officer.calculate_bonus()}")
+print(f"Премия старшего сотрудника: {senior_officer.calculate_bonus()}")
+print(f"Премия директора: {director.calculate_bonus()}")
 
 print(
     f"Соотношение зарплаты к рабочим часам для сотрудника: {officer.salary_to_hours_ratios()}"
